@@ -1,0 +1,99 @@
+#:kivy 1.9.1
+#:import Color kivy.utils.get_color_from_hex
+
+<MenuLayout@FloatLayout>:
+    size_hint: 1, 1
+    canvas.before:
+        Color:
+            rgba: Color("#ffffff")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Image:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        source: "images/logof2.png"
+        pos_hint: {"center_x": .10, "center_y": .85}
+        size_hint: 1, 1
+
+    Button:
+        text: "Menu Principal"
+        pos_hint: {"center_x": .50, "center_y": .95}
+        size_hint: .99, .1
+        color: Color("#FFFAFA")
+        background_color: Color("#008000")
+
+                
+                
+    Label:
+        text: "Care"
+        font_size: 60
+        color: Color("#FF0000") 
+        font_name: "Roboto"
+        pos_hint: {"center_x":.50, "center_y": .85}
+
+  
+    
+    Button:          
+        pos_hint: {"center_x": .25, "center_y": .70}
+        size_hint: .25, .15
+        background_normal: "images/agenda.png"
+        on_press: root.agenda()   
+                
+    Label:
+        text: "Agenda"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.25, "center_y": .60}
+
+   
+    Button:
+        background_normal: "images/historico.png"
+        pos_hint: {"center_x": .65, "center_y": .70}
+        size_hint: .25, .15
+        on_press: root.historico()      
+                
+    Label:
+        text: "Historico"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.65, "center_y": .60}   
+
+    Button:
+        background_normal: 'images/perfil.jpg'
+        pos_hint: {"center_x": .25, "center_y": .40}
+        size_hint: .25, .15
+        on_press: root.perfil()      
+                
+    Label:
+        text: "Perfil"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.25, "center_y": .30}  
+
+
+    Button:
+        background_normal: 'images/novo.png'
+        pos_hint: {"center_x": .65, "center_y": .40}
+        size_hint: .25, .15 
+        on_press: root.novo()         
+                
+    Label:
+        text: "Novo"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.65, "center_y": .30}     
+    
+                            
+   
+    
+MenuLayout:

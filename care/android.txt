@@ -1,0 +1,3 @@
+title=Care1
+author=Ana
+orientation=portrait 

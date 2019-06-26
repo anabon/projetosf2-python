@@ -1,0 +1,107 @@
+#:kivy 1.9.1
+#:import Color kivy.utils.get_color_from_hex
+
+<WelcomeLayout@FloatLayout>:
+    size_hint: 1, 1
+    canvas.before:
+        Color:
+            rgba: Color("#ffffff")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        source: "images/logo.png"
+        pos_hint: {"center_x": .50, "center_y": .90}
+        size_hint: 1, 1
+
+    Image:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        source: "images/logof2.png"
+        pos_hint: {"center_x": .10, "center_y": .90}
+        size_hint: 1, 1      
+                
+    Label:
+        text: "Bem vindo ao cadastro do seu APP"
+        font_size: 50
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.50, "center_y": .75}
+    Label:
+        text: "Care"
+        font_size: 60
+        color: Color("#FF0000") 
+        font_name: "Roboto"
+        pos_hint: {"center_x":.50, "center_y": .70} 
+    Label:
+        text: "Nome Completo:"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.20, "center_y": .59}
+    TextInput:
+        pos_hint:{'x': .4, 'y': .56}
+        size_hint: .5, .05  
+
+    Label:
+        text: "Endereço"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.15, "center_y": .49}
+    TextInput:
+        pos_hint:{'x': .4, 'y': .46}
+        size_hint: .5, .05
+
+    Label:
+        text: "Bairro"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.15, "center_y": .39}
+    TextInput:
+        pos_hint:{'x': .4, 'y': .36}
+        size_hint: .5, .05 
+
+    Label:
+        text: "Cidade"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.15, "center_y": .29}
+    TextInput:
+        pos_hint:{'x': .4, 'y': .26}
+        size_hint: .5, .05 
+
+    Label:
+        text: "CPF"
+        font_size: 40
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.15, "center_y": .19}
+    TextInput:
+        pos_hint:{'x': .4, 'y': .16}
+        size_hint: .5, .05
+
+    Button:
+        text: "Cadastrar"
+        pos_hint: {"center_x": .5, "center_y":.1}
+        size_hint: .90, .1
+        color: Color("#FFFAFA")
+        background_color: Color("#008000")
+        on_press: root.press()
+
+                           
+   
+    
+WelcomeLayout:

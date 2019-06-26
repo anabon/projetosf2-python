@@ -1,0 +1,86 @@
+#:kivy 1.9.1
+#:import Color kivy.utils.get_color_from_hex
+
+<MainLayout@FloatLayout>:
+    size_hint: 1, 1
+    canvas.before:
+        Color:
+            rgba: Color("#ffffff")
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Image:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        source: "images/logo.png"
+        pos_hint: {"center_x": .5, "center_y": .90}
+        size_hint: 1, 1
+                
+    Label:
+        text: "CARE - Seu app de beleza"
+        font_size: 60
+        color: Color("#FF0000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.50, "center_y": .75}
+
+    
+    Label:
+        text: "Login:"
+        font_size: 50
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.12, "center_y": .65}
+
+    TextInput:
+        pos_hint:{'x': .3, 'y': .63}
+        size_hint: .5, .05 
+        
+
+    Label:
+        text: "Senha:"
+        font_size: 50
+        color: Color("#000000")
+        font_name: "Roboto"
+        pos_hint: {"center_x":.12, "center_y": .55}    
+
+    TextInput:
+        pos_hint:{'x': .3, 'y': .53}
+        size_hint: .5, .05   
+        
+        
+    Button:
+        id: entrar
+        text: "Entrar"
+        pos_hint: {"center_x": .5, "center_y": .35}
+        size_hint: .60, .1
+        background_color: 34,139,34
+        on_press: root.entrar()
+        
+
+
+    Button:
+        text: "Ainda Não sou Cadastrado(a)"
+        pos_hint: {"center_x": .5, "center_y": .20}
+        size_hint: .60, .1
+        color: Color("#FFFAFA")
+        background_color: Color("#008000")
+        on_press: root.press()    
+    
+    Image:
+        canvas:
+            Color:
+                rgba: 1, 1, 1, 0
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        source: "images/logof2.png"
+        pos_hint: {"center_x": .1, "center_y": .1}
+        size_hint: 1, 1    
+    
+
+MainLayout:
